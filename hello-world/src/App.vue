@@ -1,6 +1,7 @@
 <template>
   <div>{{ greet }} {{ name }}</div>
   <div v-text="channel"></div>
+  <div v-html="hack"></div>
 </template>
 
 <script>
@@ -11,6 +12,7 @@ export default {
       greet: "Hello",
       name: "Engr. Leonel J. Felezario",
       channel: "Hotdog",
+      hack: `<a href="#" onclick="alert('All your base are belong to us!')">CLICK ME!<a/>`,
     };
   },
 };
