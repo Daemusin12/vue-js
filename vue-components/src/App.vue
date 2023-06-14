@@ -1,15 +1,17 @@
 <template>
-  <GreetHello name="Lucho" heroName="Spiderman"/>
-  <GreetHello :name="name" :heroName="channel"/>
+  <!-- <GreetHello name="Lucho" heroName="Spiderman"/>
+  <GreetHello :name="name" :heroName="channel"/> -->
+  <ArticleComponent :likes="50" :isPublished="true"/>
 </template>
 
 <script>
-import GreetHello from './components/GreetHello.vue'
+// import GreetHello from './components/GreetHello.vue'
+import ArticleComponent from './components/ArticleComponent.vue'
 
 export default {
   name: 'App',
   components: {
-    GreetHello,
+    ArticleComponent
   },
   data() {
     return {
