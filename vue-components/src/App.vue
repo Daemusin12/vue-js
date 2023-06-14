@@ -1,5 +1,6 @@
 <template>
-  <GreetHello />
+  <GreetHello name="Lucho" heroName="Spiderman"/>
+  <GreetHello :name="name" :heroName="channel"/>
 </template>
 
 <script>
@@ -9,7 +10,14 @@ export default {
   name: 'App',
   components: {
     GreetHello,
-  } 
+  },
+  data() {
+    return {
+      name: 'Leozzio',
+      channel: 'Hotdog'
+    }
+  }
+
 }
 </script>
 
