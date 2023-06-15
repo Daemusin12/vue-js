@@ -4,24 +4,26 @@
   <!-- <ArticleComponent id="my-article"  :likes="50" :isPublished="true"/> -->
   <!-- <h3>AppComponent username {{ name }}</h3>
   <ComponentC /> -->
-  <button @click="showPopUp = true">Show PopUp</button>
-  <PopUp v-show="showPopUp" @close="closePopUp" />
+  <!-- <button @click="showPopUp = true">Show PopUp</button>
+  <PopUp v-show="showPopUp" @close="closePopUp" /> -->
+  <InputComponent v-model="name" />
 </template>
 
 <script>
 // import GreetHello from './components/GreetHello.vue'
 // import ArticleComponent from './components/ArticleComponent.vue'
 // import ComponentC from './components/ComponentC.vue'
-import PopUp from './components/PopUp.vue'
+// import PopUp from './components/PopUp.vue'
+import InputComponent from './components/InputComponent.vue';
 
 export default {
   name: 'App',
   components: {
-    PopUp,
-  },
+    InputComponent,
+},
   data() {
     return {
-      showPopUp: false
+      name: ''
     }
   },
   provide() {
@@ -29,10 +31,6 @@ export default {
       }
     },
   methods: { 
-    closePopUp(name) {
-      this.showPopUp = false
-      console.log('name', name)
-    }
   }
 }
 </script>
