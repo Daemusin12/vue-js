@@ -3,14 +3,28 @@
     <h2>
         This is a PopUp
     </h2>
-    <button @click="$emit('close', 'Leozzio')">Close PopUp</button>
+    <input type="text" v-model="name" />
+    <button @click="$emit('close', name)">Close PopUp</button>
   </div>
 </template>
 
 <script>
-export default {
+export default { 
     name: 'PopUp',
-    emits: ['close']
+    emits: {
+        close: (name) => {
+            if (!name) {
+                return false
+            } else {
+                return true
+            }
+        }
+    },
+    data() {
+        return {
+            name: ''
+        }
+    }
 }
 </script>
 
