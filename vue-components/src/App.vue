@@ -41,15 +41,25 @@
          {{ slotProps.firstName }}
       </template>
     </NameList> -->
-    <h4>App component text</h4>
+    <!-- <h4>App component text</h4>
     <ChildStyles>
       <h4>
         Childstyles component text
       </h4>
-    </ChildStyles>
+    </ChildStyles> -->
+    <button @click="activeTab = 'TabA'">Tab A</button>
+    <button @click="activeTab = 'TabB'">Tab B</button>
+    <button @click="activeTab = 'TabC'">Tab C</button>
+
+    <component :is="activeTab" />
+
+    <!-- <TabA v-if="activeTab === 'TabA'" />
+    <TabB v-if="activeTab === 'TabB'"/>
+    <TabC v-if="activeTab === 'TabC'"/>     -->
 </template>
 
 <script>
+import ComponentC from './components/ComponentC.vue';
 // import GreetHello from './components/GreetHello.vue'
 // import ArticleComponent from './components/ArticleComponent.vue'
 // import ComponentC from './components/ComponentC.vue'
@@ -57,15 +67,20 @@
 // import InputComponent from './components/InputComponent.vue';
 // import CardComponent from './components/CardComponent.vue';
 // import NameList from './components/NameList.vue';
-import ChildStyles from './components/ChildStyles.vue';
+// import ChildStyles from './components/ChildStyles.vue';
+import TabA from './components/TabA.vue';
+import TabB from './components/TabB.vue';
+import TabC from './components/TabC.vue';
 
 export default {
   name: 'App', 
   components: {
-    ChildStyles,
+    TabA, TabB, TabC,
+    ComponentC
   },
   data() {
     return {
+      activeTab: 'TabA',
     }
   },
   provide() {
@@ -77,7 +92,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style >
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
