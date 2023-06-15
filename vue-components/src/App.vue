@@ -7,7 +7,7 @@
   <!-- <button @click="showPopUp = true">Show PopUp</button>
   <PopUp v-show="showPopUp" @close="closePopUp" /> -->
   <!-- <InputComponent v-model="name" /> -->
-    <CardComponent></CardComponent>
+    <!-- <CardComponent></CardComponent>
     <CardComponent>Card content</CardComponent>
     <CardComponent> 
         <h2>Card content</h2>
@@ -25,7 +25,22 @@
       <template v-slot:footer>
         <button>View Details</button>
       </template>
-    </CardComponent>
+    </CardComponent> -->
+    <NameList >
+      <template v-slot:default="slotProps">
+         {{ slotProps.firstName }} {{ slotProps.lastName }}
+      </template>
+    </NameList>
+    <NameList>
+      <template v-slot:default="slotProps">
+         {{ slotProps.lastName }} {{ slotProps.firstName }}
+      </template>
+    </NameList>
+    <NameList>
+      <template v-slot:default="slotProps">
+         {{ slotProps.firstName }}
+      </template>
+    </NameList>
 </template>
 
 <script>
@@ -34,13 +49,14 @@
 // import ComponentC from './components/ComponentC.vue'
 // import PopUp from './components/PopUp.vue'
 // import InputComponent from './components/InputComponent.vue';
-import CardComponent from './components/CardComponent.vue';
+// import CardComponent from './components/CardComponent.vue';
+import NameList from './components/NameList.vue';
 
 export default {
   name: 'App',
   components: {
-    CardComponent,
-},
+    NameList,
+  },
   data() {
     return {
     }
