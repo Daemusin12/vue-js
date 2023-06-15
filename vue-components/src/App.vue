@@ -6,7 +6,15 @@
   <ComponentC /> -->
   <!-- <button @click="showPopUp = true">Show PopUp</button>
   <PopUp v-show="showPopUp" @close="closePopUp" /> -->
-  <InputComponent v-model="name" />
+  <!-- <InputComponent v-model="name" /> -->
+    <CardComponent></CardComponent>
+    <CardComponent>Card content</CardComponent>
+    <CardComponent> 
+        <h2>Card content</h2>
+    </CardComponent>
+    <CardComponent>
+      <img src="https://picsum.photos/200"/>
+    </CardComponent>
 </template>
 
 <script>
@@ -14,16 +22,16 @@
 // import ArticleComponent from './components/ArticleComponent.vue'
 // import ComponentC from './components/ComponentC.vue'
 // import PopUp from './components/PopUp.vue'
-import InputComponent from './components/InputComponent.vue';
+// import InputComponent from './components/InputComponent.vue';
+import CardComponent from './components/CardComponent.vue';
 
 export default {
   name: 'App',
   components: {
-    InputComponent,
+    CardComponent,
 },
   data() {
     return {
-      name: ''
     }
   },
   provide() {
