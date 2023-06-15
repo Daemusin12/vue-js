@@ -15,6 +15,17 @@
     <CardComponent>
       <img src="https://picsum.photos/200"/>
     </CardComponent>
+    <CardComponent>
+      <template v-slot:header>
+        <h3>Header</h3>
+      </template>
+      <template v-slot:default>
+        <img src="https://picsum.photos/200">
+      </template>
+      <template v-slot:footer>
+        <button>View Details</button>
+      </template>
+    </CardComponent>
 </template>
 
 <script>
