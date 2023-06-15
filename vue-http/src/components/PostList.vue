@@ -13,7 +13,10 @@
 <script>
 import axios from 'axios'
 export default {
-    name: 'PostList', 
+    name: 'PostList',
+    created() {
+        this.getPosts()
+    }, 
     data() {
         return {
             posts: [],
