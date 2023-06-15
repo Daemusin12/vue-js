@@ -1,7 +1,7 @@
 <template>
   <!-- <GreetHello name="Lucho" heroName="Spiderman"/>
   <GreetHello :name="name" :heroName="channel"/> -->
-  <ArticleComponent :likes="50" :isPublished="true"/>
+  <ArticleComponent id="my-article"  :likes="50" :isPublished="true"/>
 </template>
 
 <script>
