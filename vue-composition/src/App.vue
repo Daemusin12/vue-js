@@ -1,16 +1,16 @@
 <template>
   <div>
-    <VModel />
+    <Computed />
   </div>
 </template>
 
 <script>
-import VModel from './components/VModel.vue';
+import Computed from './components/Computed.vue';
 
 export default {
   name: 'App',
   components: {
-    VModel
+    Computed
   }
 }
 </script>
