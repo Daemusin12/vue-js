@@ -1,16 +1,16 @@
 <template>
   <div>
-    <Watch />
+    <ProvideInject />
   </div>
 </template>
 
 <script>
-import Watch from './components/Watch.vue';
+import ProvideInject from './components/ProvideInject.vue';
 
 export default {
   name: 'App',
   components: {
-    Watch
+    ProvideInject
   }
 }
 </script>
